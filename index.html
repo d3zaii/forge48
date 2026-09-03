@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07060b" />
+  <title>FORGE48 — 48-Hour Online Build Challenge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-mark">F<span>48</span></div>
+    <div class="loader-line"><i></i></div>
+    <p>INITIALISING THE BUILD ROOM</p>
+  </div>
+
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
+  <canvas id="scene"></canvas>
+
+  <header class="nav-wrap">
+    <nav class="nav glass">
+      <a class="brand" href="#top" aria-label="FORGE48 home">
+        <span class="brand-icon">F<span>48</span></span>
+        <span class="brand-copy"><b>FORGE</b><small>48</small></span>
+      </a>
+      <button class="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#faq">FAQ</a>
+        <a href="#register" class="nav-cta">Register <span>↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> 11–12 SEPTEMBER 2026 · 100% ONLINE · INDIA</div>
+        <h1>DON'T JUST<br><em>HAVE</em> THE IDEA.<br><strong>FORGE IT.</strong></h1>
+        <p class="hero-sub">A 48-hour online innovation challenge for builders, designers, problem-solvers and curious minds ready to ship something real.</p>
+
+        <div class="hero-actions">
+          <a href="#register" class="btn btn-primary magnetic">ENTER THE FORGE <span>↗</span></a>
+          <a href="#about" class="btn btn-ghost">EXPLORE <span>↓</span></a>
+        </div>
+
+        <div class="hero-meta">
+          <div><b>48</b><span>HOURS</span></div>
+          <div><b>01–04</b><span>MEMBERS / TEAM</span></div>
+          <div><b>ONLINE</b><span>FROM ANYWHERE</span></div>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-ring ring-a"></div>
+        <div class="orbit-ring ring-b"></div>
+        <div class="orbit-core">
+          <div class="core-inner">F<span>48</span></div>
+        </div>
+        <div class="float-card card-one">BUILD<br><small>SHIP FAST</small></div>
+        <div class="float-card card-two">AI<br><small>SECURITY</small></div>
+        <div class="float-card card-three">PRODUCT<br><small>DESIGN</small></div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="ticker-track">
+        <span>BUILD SOMETHING REAL</span><i>✦</i><span>48 HOURS</span><i>✦</i><span>NO BORING SLIDES</span><i>✦</i><span>SHIP IT</span><i>✦</i>
+        <span>BUILD SOMETHING REAL</span><i>✦</i><span>48 HOURS</span><i>✦</i><span>NO BORING SLIDES</span><i>✦</i><span>SHIP IT</span><i>✦</i>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-kicker">01 / THE CHALLENGE</div>
+      <div class="split">
+        <div>
+          <h2>IDEA IN.<br><span>PROTOTYPE OUT.</span></h2>
+        </div>
+        <div class="about-text">
+          <p class="lead">FORGE48 is built around one simple question: <b>what can you make when you stop overthinking and start building?</b></p>
+          <p>Choose a problem. Form a team. Build for 48 hours. Get feedback from practitioners. Submit a working prototype and show the world what you made.</p>
+          <div class="micro-grid">
+            <div><b>01</b><span>Choose a track</span></div>
+            <div><b>02</b><span>Build your solution</span></div>
+            <div><b>03</b><span>Demo & submit</span></div>
+            <div><b>04</b><span>Get discovered</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tracks" class="section tracks">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">02 / PICK YOUR BATTLEFIELD</div>
+          <h2>PICK YOUR<br><span>BATTLEFIELD.</span></h2>
+        </div>
+        <p>Don't force your idea into a box. Choose the battlefield that feels right, open the mission file, and find a problem worth building for.</p>
+      </div>
+
+      <div class="track-grid">
+        <article class="track-card tilt track-open" data-track="ai" data-accent="gold" tabindex="0" role="button">
+          <div class="track-no">01</div><div class="track-icon">◈</div>
+          <h3>AI & AUTOMATION</h3>
+          <p>Agents, intelligent workflows and practical AI that removes friction from real-world work.</p>
+          <span class="track-tag">6 MISSION FILES ↗</span>
+        </article>
+
+        <article class="track-card tilt track-open" data-track="product" data-accent="cyan" tabindex="0" role="button">
+          <div class="track-no">02</div><div class="track-icon">⌘</div>
+          <h3>PRODUCT & SAAS</h3>
+          <p>Build digital products people understand instantly, return to often and actually want to use.</p>
+          <span class="track-tag">6 MISSION FILES ↗</span>
+        </article>
+
+        <article class="track-card tilt track-open" data-track="open" data-accent="violet" tabindex="0" role="button">
+          <div class="track-no">03</div><div class="track-icon">✦</div>
+          <h3>OPEN INNOVATION</h3>
+          <p>No fixed lane. Bring a problem from your world and prove why your solution deserves to exist.</p>
+          <span class="track-tag">6 MISSION FILES ↗</span>
+        </article>
+
+        <article class="track-card tilt track-open" data-track="cyber" data-accent="magenta" tabindex="0" role="button">
+          <div class="track-no">04</div><div class="track-icon">⌁</div>
+          <h3>CYBERSECURITY</h3>
+          <p>Design safer digital experiences, detect threats earlier and make security useful instead of invisible.</p>
+          <span class="track-tag">6 MISSION FILES ↗</span>
+        </article>
+
+        <article class="track-card tilt wide track-open" data-track="impact" data-accent="white" tabindex="0" role="button">
+          <div class="track-no">05</div><div class="track-icon">∞</div>
+          <h3>IMPACT & FUTURE</h3>
+          <p>Technology for education, climate, mobility, accessibility, communities and the problems that will matter next.</p>
+          <span class="track-tag">6 MISSION FILES ↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="section timeline">
+      <div class="section-kicker">03 / THE RUN</div>
+      <h2>48 HOURS.<br><span>NO EXCUSES.</span></h2>
+      <div class="timeline-line"></div>
+      <div class="timeline-grid">
+        <div class="time-node"><span>DAY 00</span><b>OPEN</b><p>Kick-off, challenge reveal, team formation and mentor briefing.</p></div>
+        <div class="time-node"><span>HOURS 01–12</span><b>THINK → MAP</b><p>Define the problem, validate the idea and sketch the first flow.</p></div>
+        <div class="time-node"><span>HOURS 13–36</span><b>BUILD → BREAK</b><p>Code, design, test, iterate. Mentors drop in throughout the build.</p></div>
+        <div class="time-node"><span>HOURS 37–48</span><b>POLISH → SHIP</b><p>Final QA, demo recording, submission and judging.</p></div>
+        <div class="time-node"><span>AFTER</span><b>SHOWCASE</b><p>Top teams are highlighted and eligible participants may enter the opportunity track.</p></div>
+      </div>
+    </section>
+
+
+    <section class="section opportunities" id="opportunities">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">07 / BEYOND THE BUILD</div>
+          <h2>THE PRIZE ISN'T<br><span>JUST THE PRIZE.</span></h2>
+        </div>
+        <p>Strong builders should leave with more than a certificate. FORGE48 opens a path into real communities, mentorship and future opportunities across the teams behind the hackathon.</p>
+      </div>
+
+      <div class="opportunity-grid">
+        <article class="opportunity-card tilt">
+          <div class="opportunity-icon">↗</div>
+          <div class="opportunity-kicker">OPPORTUNITY 01</div>
+          <h3>INTERNSHIP OPPORTUNITIES</h3>
+          <p>Standout participants may be considered for internship or project-based opportunities with <strong>DEZAI Technologies</strong> and participating partner organisations, subject to their respective selection processes.</p>
+        </article>
+
+        <article class="opportunity-card tilt">
+          <div class="opportunity-icon">◎</div>
+          <div class="opportunity-kicker">OPPORTUNITY 02</div>
+          <h3>JOIN THE COMMUNITIES</h3>
+          <p>Top participants can get opportunities to connect with the wider <strong>NeoFolks</strong>, <strong>Netvent Parivaar</strong> and <strong>iSecurify</strong> communities, where available and subject to each community's criteria.</p>
+        </article>
+
+        <article class="opportunity-card tilt">
+          <div class="opportunity-icon">✦</div>
+          <div class="opportunity-kicker">OPPORTUNITY 03</div>
+          <h3>MENTORSHIP & NETWORK</h3>
+          <p>Build alongside mentors, developers, founders and practitioners. Your project becomes the conversation starter for feedback, introductions and future collaboration.</p>
+        </article>
+
+        <article class="opportunity-card tilt">
+          <div class="opportunity-icon">★</div>
+          <div class="opportunity-kicker">OPPORTUNITY 04</div>
+          <h3>GET YOUR BUILD SEEN</h3>
+          <p>Exceptional projects may be highlighted through hackathon and partner channels, giving builders a chance to showcase what they made beyond the 48-hour window.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section partners">
+      <div class="section-kicker">05 / BUILT WITH</div>
+      <h2>FOUR TEAMS.<br><span>ONE BUILD ROOM.</span></h2>
+      <p class="partners-intro">Built together by the teams behind the build room.</p>
+      <div class="logo-wall">
+        <div class="logo-box dezai-logo"><img src="assets/dezai.png" alt="DEZAI"></div>
+        <div class="logo-box netvent-logo"><img src="assets/netvent-parivaar.png" alt="Netvent Parivaar"></div>
+        <div class="logo-box neofolks-logo"><img src="assets/neofolks.png" alt="NeoFolks"></div>
+        <div class="logo-box isec-logo"><img src="assets/isecurify.png" alt="iSecurify"></div>
+      </div>
+    </section>
+
+
+    <section class="section vault-section" id="vault">
+      <div class="section-kicker">06 / UNLOCK THE FORGE</div>
+      <div class="vault-layout">
+        <div class="vault-copy">
+          <h2>CRACK THE<br><span>VAULT.</span></h2>
+          <p>One tiny test before you enter the build room. Solve the pattern, punch in the answer and see what is hiding behind the wall.</p>
+          <div class="game-hint">HINT // EVERY STEP GOES UP BY 2.</div>
+          <div class="sequence">
+            <span>2</span><span>4</span><span>6</span><i>?</i>
+          </div>
+          <div class="vault-status" id="vaultStatus">SYSTEM LOCKED · FIND THE NEXT NUMBER</div>
+        </div>
+
+        <div class="vault" id="vaultGame" aria-label="Interactive Forge48 vault puzzle">
+          <div class="vault-glow"></div>
+          <div class="crack-overlay" id="crackOverlay">
+            <svg viewBox="0 0 600 600" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M292 0 L310 94 L276 160 L329 226 L295 282 L360 337 L331 414 L386 487 L354 600" />
+              <path d="M295 282 L222 246 L171 277 L100 255 L0 293" />
+              <path d="M331 414 L404 389 L470 425 L600 396" />
+              <path d="M310 94 L382 76 L436 31" />
+              <path d="M276 160 L214 124 L145 145" />
+              <path d="M360 337 L429 315 L503 333" />
+            </svg>
+          </div>
+
+          <div class="vault-face">
+            <div class="vault-topline"><span>FORGE48</span><span>SECURE / 48</span></div>
+            <div class="lock-ring">
+              <div class="lock-inner">
+                <div class="lock-shackle"></div>
+                <div class="lock-body">⌁</div>
+              </div>
+            </div>
+            <div class="code-display" id="codeDisplay">_ _ _ _</div>
+            <div class="keypad" id="keypad">
+              <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+              <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+              <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+              <button data-key="clear">CLR</button><button data-key="0">0</button><button data-key="enter">ENTER</button>
+            </div>
+            <div class="vault-bottomline">NEXT NUMBER = 8 · ENTER 0008</div>
+          </div>
+
+          <div class="price-reveal" id="priceReveal">
+            <div class="reveal-kicker">ACCESS GRANTED</div>
+            <div class="reveal-title">₹25,000<br>PRIZE POOL.</div>
+            <div class="core-symbol">₹</div>
+            <p class="reveal-message">THE FORGE IS OPEN.</p>
+            <p class="reveal-sub">You cracked the vault. Now the real challenge begins. Pick your battlefield, choose a mission and build something worth showing.</p>
+            <a href="#tracks" class="btn btn-primary">CHOOSE YOUR BATTLEFIELD <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="register" class="section register">
+      <div class="register-card">
+        <div class="section-kicker">07 / READY?</div>
+        <h2>ENTER THE<br><span>FORGE.</span></h2>
+        <p>Registration is intentionally simple. Bring a laptop, a problem worth solving and a team of up to four.</p>
+        <div class="price-row">
+          <div><small>EARLY ACCESS</small><b>₹75</b><span>SOLO</span></div>
+          <div><small>TEAM</small><b>₹149+</b><span>2–4 MEMBERS</span></div>
+        </div>
+        <button id="registerBtn" class="btn btn-primary btn-large magnetic">REGISTER NOW <span>↗</span></button>
+        <p class="tiny">11–12 September 2026 · Online · India-wide</p>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="section-kicker">09 / FAQ</div>
+      <h2>QUESTIONS?<br><span>GOOD.</span></h2>
+      <div class="faq-list">
+        <details open><summary>Who can participate?</summary><p>Students, early builders, designers, developers and curious problem-solvers from across India. Teams can have 1–4 members.</p></details>
+        <details><summary>Is it completely online?</summary><p>Yes. The challenge, mentorship, submissions and demos are designed to run online.</p></details>
+        <details><summary>Do I need to be an expert?</summary><p>No. You need a willingness to build. Pick a problem that matches your current skills and collaborate with teammates where you can.</p></details>
+        <details><summary>Are internships guaranteed?</summary><p>No. Top-performing participants may be considered for remote project-based internship opportunities, subject to selection and eligibility.</p></details>
+        <details><summary>What happens after registration?</summary><p>You receive the event brief, challenge details and joining instructions before the opening session.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand"><span class="brand-icon">F<span>48</span></span><p>TAKE THE IDEA<br>OUT OF YOUR HEAD.</p></div>
+      <div class="footer-links"><a href="#about">About</a><a href="#tracks">Tracks</a><a href="#timeline">Schedule</a><a href="#register">Register</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 FORGE48</span><span>DEZAI × NETVENT × NEOFOLKS × iSECURIFY</span></div>
+  </footer>
+
+  <div id="missionModal" class="mission-modal" aria-hidden="true">
+    <div class="mission-backdrop"></div>
+    <div class="mission-box glass">
+      <button class="mission-close" aria-label="Close battlefield">×</button>
+      <div class="section-kicker" id="missionKicker">MISSION FILES</div>
+      <div class="mission-heading">
+        <div>
+          <h3 id="missionTitle">AI & AUTOMATION</h3>
+          <p id="missionIntro">Pick one of the six problems below, or use them as a launchpad for your own solution.</p>
+        </div>
+        <div class="mission-count">06<br><span>FILES</span></div>
+      </div>
+      <div class="mission-list" id="missionList"></div>
+      <div class="mission-footer">01–05 ARE GUIDED CHALLENGES · 06 IS YOUR OPEN TRACK</div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-box glass">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div class="section-kicker">REGISTRATION</div>
+      <h3>READY TO <span>FORGE?</span></h3>
+      <p>Connect the registration button to your preferred form/payment page in <code>script.js</code>.</p>
+      <div class="modal-note">
+        <b>Current CTA:</b> <span id="registrationUrlPreview">Set your registration URL in CONFIG.registrationUrl</span>
+      </div>
+      <a id="modalContinue" class="btn btn-primary" href="#" target="_blank" rel="noopener">CONTINUE <span>↗</span></a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
